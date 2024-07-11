@@ -14,7 +14,7 @@ import com.boot.service.CompanyListService;
 public class MainController {
 	
 	@Autowired
-	private CompanyListService service;
+	private CompanyListService companyListService;
 	
 	   @GetMapping("/main")
 	    public String hello (Model model) {

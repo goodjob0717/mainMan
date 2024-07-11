@@ -39,7 +39,7 @@
                     <ul>
                         <li><a href="#">기업 정보</a></li>
                         <li><a href="/company_list">기업 리스트</a></li>
-                        <li><a href="#">연봉</a></li>
+                        <li><a href="/salary">연봉</a></li>
                         <li><a href="#">기업 리뷰</a></li>
                     </ul>
                 </div>

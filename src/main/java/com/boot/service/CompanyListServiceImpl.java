@@ -38,6 +38,27 @@ public class CompanyListServiceImpl implements CompanyListService {
 		
 		return dto;
 	}
+
+	@Override
+	public CompanyListDTO getCompanyById(int id) {
+	    CompanyListDAO dao = sqlSession.getMapper(CompanyListDAO.class);
+        return dao.getCompanyById(id);
+	}
+
+	@Override
+	public List<CompanyListDTO> RankedBySalary(HashMap<String, String> param) {
+//		log.info("@# BoardServiceImpl contentView");
+		
+		CompanyListDAO dao = sqlSession.getMapper(CompanyListDAO.class);
+//		sqlSession.getMapper(CompanyListDAO.class): 
+//		MyBatis의 CompanyListDAO 인터페이스의 구현체를 가져옵니다.
+		
+		 List<CompanyListDTO> dto = dao.RankedBySalary(param); 
+//		dao.company_list(param):
+//			DAO의 메서드를 호출하여 데이터베이스에서 데이터를 조회합니다.
+		
+		return dto;
+	}
 	
 	
 

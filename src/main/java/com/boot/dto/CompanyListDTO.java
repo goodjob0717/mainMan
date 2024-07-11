@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CompanyListDTO {
+	private int ranking;                   // 순위
     private int corpInfo_No;           // 기업정보의번호
     private String corp_name;          // 기업명
     private String corp_type;          // 기업형태

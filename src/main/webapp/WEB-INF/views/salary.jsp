@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>기업 리스트</title>
+<title>구인구직 홈페이지</title>
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/main.css' />">
@@ -19,27 +19,25 @@
         });
     });
 </script>
-
 <style>
     body {
-        margin: 0;
+        margin: 0;            
         font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem; /* 여백 설정 */
+        padding-top: 10rem; /* 헤더 높이만큼 패딩 추가 */
+        padding-bottom: 12rem; /* 푸터 높이만큼 패딩 추가 */
+        background: whitesmoke;
+        min-height: calc(100vh - 17rem); /* 전체 높이에서 헤더와 푸터 높이만큼 빼기 */
     }
-
-    h1 {
-        text-align: center;
-        margin: 2rem 0;
-        color: lightblue;
-    }
-
     .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-        padding: 0 10%; 
-        /* padding: 0 10%;   3개씩 배열할수있는수치 0 10%*/
-
+        padding: 0 40%;
     }
 
     .company-box {
@@ -50,7 +48,7 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 15px;
         background: white;
-        width: 350px; /* Fixed width for each card */
+        width: 550px; /* Fixed width for each card */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-decoration: none;
         color: inherit;
@@ -85,22 +83,30 @@
 </style>
 </head>
 <body>
+    <div id="wrap">
+        <h1 style="color: black; margin: 2rem 0;"> 연봉 정보 </h1>
+    </div>
+    <div id="wrap">
+        <h1 style="color: red; margin: 2rem 0;"> TOP 5 연봉 </h1>
+    </div>
+    <div id="wrap">
+        <h1 style="color: red; margin: 2rem 0;"> 평균 연봉</h1>
 
-    <h1>기업 리스트</h1>
+    </div>
+
     <div class="container">
-        <c:forEach var="company" items="${company_list}">
+        <c:forEach var="company" items="${salary_list}">
             <a href="<c:url value='/company_content?id=${company.corpInfo_No}' />" class="company-box">
                 <div class="company-info">
                     <h3>${company.corp_name}</h3>
-                    <p>기업 형태: ${company.corp_type}</p>
                     <p>주소: ${company.corp_address}</p>
                     <p>업종: IT</p>
+                    <p style="color: red;">연봉: ${company.corpInfo_Sal}</p>
                 </div>
-                <img class="company-logo" src="<c:url value='/corp_img/corp_01.png' />" alt="${company.corp_name} 로고">
+                <img class="company-logo" src="<c:url value='/number_img/number_${company.ranking}.png' />" alt="${company.corp_name} 순위">
             </a>
         </c:forEach>
     </div>
-
     <%@ include file="footer.jsp" %>
 </body>
 </html>
