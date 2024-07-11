@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boot.dao.CompanyListDAO">
+
+<!--1. 기존-->
+<!--    <select id="list" resultType="com.boot.dto.CompanyListDTO">-->
+<!--        select corpInfo_No, corp_name, corp_type, corp_address, corpInfo_Sal,-->
+<!--               corpInfo_empNo, corpInfo_money, corpInfo_intro, corpInfo_birth-->
+<!--        from company_list-->
+<!--    </select>-->
+
+<!--2.추가-->
+    <select id="company_list" resultType="com.boot.dto.CompanyListDTO">
+<!--        select corpInfo_No, corp_name-->
+<!--        from company_list-->
+<!--        where corpInfo_No=#{corpInfo_No}-->
+        select corpInfo_No, corp_name, corp_type, corp_address, corpInfo_Sal,
+               corpInfo_empNo, corpInfo_money, corpInfo_intro, corpInfo_birth
+        from company_list
+<!--        where corpInfo_No=#{corpInfo_No}-->
+    </select>
+
+<!--  <select id="contentView" resultType="com.boot.dto.BoardDTO">-->
+<!--      select boardNo, boardName, boardTitle, boardContent, boardDate, boardHit from company_list where boardNo=#{boardNo}-->
+<!--    </select>-->
+</mapper>
