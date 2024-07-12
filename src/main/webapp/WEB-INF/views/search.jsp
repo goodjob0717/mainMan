@@ -25,14 +25,17 @@
 
 
     <div id="wrap">
-               <h1 >검색 결과 </h1>        
-                 <!-- 검색어를 가져와 출력합니다 -->
+        <div>
+            <h1  style="color: black; margin: 2rem 0;">검색 결과 </h1>        
+        </div>
         <c:if test="${not empty param.query}">
                   <p>검색어: ${param.query}</p>
         </c:if>
 
           <!-- 여기에 실제 검색 결과를 추가 -->
-          <p>검색 결과가 여기에 표시됩니다.</p>
+          <c:forEach var="company" items="${companyList}">
+            <p>${company.corp_name} - ${company.corp_address} - ${company.corpInfo_Sal}</p>
+        </c:forEach>
     </div>
     <%@ include file="footer.jsp" %>
 </body>

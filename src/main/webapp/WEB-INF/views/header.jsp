@@ -4,7 +4,6 @@
 
 <header>
     <a href="main">
-    <!-- <a href="main.jsp"> -->
         <img src="<c:url value='/img/logo.png' />" alt="Logo">
     </a>
     <div class="header-content">
@@ -69,7 +68,12 @@
 
               <!-- 로그인 및 회원가입 링크 추가 -->
               <li class="nav-right">
-                <a href="myPage">마이페이지</a>
+
+                <!-- 혹여나 마이페이지 이동중  오류 발생시 a href방식으로 변경할수도  -->
+                <form action="myPage" method="get" id="myPageForm">
+                    <input type="hidden" name="user_id" value="${user_id}"/>
+                    <a type="button" onclick="document.getElementById('myPageForm').submit();">마이페이지</a>
+                </form>
                 <a href="login">로그아웃</a>
             </li>
         </ul>

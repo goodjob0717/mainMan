@@ -59,32 +59,16 @@ public class CompanyListServiceImpl implements CompanyListService {
 		
 		return dto;
 	}
-	
-	
 
-	//1. 기존
-//	@Override
-//	public ArrayList<CompanyListDTO> list() {
-////		log.info("@# CompanyListServiceImpl list");
-//		
-//		CompanyListDAO dao = sqlSession.getMapper(CompanyListDAO.class);
-//		
-//		ArrayList<CompanyListDTO> list = dao.list();
-//		
-//		return list;
-//	}
-//
-//
-//	@Override
-//	public CompanyListDTO contentView(HashMap<String , String> param) {
-////		log.info("@# CompanyListServiceImpl contentView");
-//		
-//		CompanyListDAO dao = sqlSession.getMapper(CompanyListDAO.class);
-//		
-//		CompanyListDTO dto = dao.contentView(param); // 위와 동일 
-//		
-//		return dto;
-//	}
+	@Override
+	public List<CompanyListDTO> searchCompany(HashMap<String, String> param) {
+		
+		CompanyListDAO dao = sqlSession.getMapper(CompanyListDAO.class);
+		
+		 List<CompanyListDTO> dto = dao.searchCompany(param); 
+		
+		return dto;
+	}
 
 	
 }

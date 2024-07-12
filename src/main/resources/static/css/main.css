@@ -14,14 +14,15 @@ body {
     color: #696B86;
 	
 	
-	margin: 0;            font-family: Arial, sans-serif;
+	margin: 0;           
+	 font-family: Arial, sans-serif;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 3rem; /* 여백 설정 */
 	padding-top: 10rem; /* 헤더 높이만큼 패딩 추가 */
 	padding-bottom: 12rem; /* 푸터 높이만큼 패딩 추가 */
-	background: whitesmoke;
+	background: #F0F8FF;
 	min-height: calc(100vh - 17rem); /* 전체 높이에서 헤더와 푸터 높이만큼 빼기 */
 }
 

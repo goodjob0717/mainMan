@@ -89,20 +89,7 @@
         <!-- 여기에 콘텐츠 추가 -->
     </div>
 
-    <h1>기업 리스트</h1>
-    <div class="container">
-        <c:forEach var="empPost" items="${MainEmpPost}">
-            <a href="<c:url value='/EmpPost_content?id=${empPost.emp_postNo}' />" class="company-box">
-                <div class="company-info">
-                    <h3>${empPost.emp_title}</h3>
-                    <p>기업 형태: ${empPost.corpInfo}</p>
-                    <p>주소: ${empPost.emp_workPlace}</p>
-                    <p>업종: IT</p>
-                </div>
-                <img class="company-logo" src="<c:url value='/corp_img/corp_01.png' />" alt="${empPost.emp_title} 로고">
-            </a>
-        </c:forEach>
-    </div>
+    
 
     <%@ include file="footer.jsp" %>
 </body>

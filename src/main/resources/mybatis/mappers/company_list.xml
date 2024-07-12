@@ -17,16 +17,11 @@
     <select id="RankedBySalary" resultType="com.boot.dto.CompanyListDTO">
         SELECT 
             @rank := @rank + 1 AS ranking,
-            corpInfo_No, 
-            corp_name, 
-            corp_type, 
-            corp_address, 
-            corpInfo_Sal,
-            corpInfo_empNo, 
-            corpInfo_money, 
-            corpInfo_intro, 
-            corpInfo_birth
-        FROM company_list, (SELECT @rank := 0) AS r
+            corpInfo_No, corp_name, corp_type, 
+            corp_address, corpInfo_Sa,corpInfo_empNo, 
+            corpInfo_money, corpInfo_intro, corpInfo_birth
+        FROM 
+        company_list, (SELECT @rank := 0) AS r
         ORDER BY corpInfo_Sal DESC
         LIMIT 5
     </select>
@@ -45,5 +40,16 @@
         FROM company_list
         WHERE corpInfo_No = #{id}
     </select>
+	
+<!--	  <select id="searchCompanies" parameterType="hashmap" resultType="com.boot.dto.CompanyListDTO">-->
+	  <select id="searchCompany"  resultType="com.boot.dto.CompanyListDTO">
+        SELECT corpInfo_No, corp_name, corp_type, corp_address, corpInfo_Sal,
+               corpInfo_empNo, corpInfo_money, corpInfo_intro, corpInfo_birth
+        FROM company_list
+        WHERE corp_name LIKE CONCAT('%', #{query}, '%')
+        OR corp_address LIKE CONCAT('%', #{query}, '%')
+    </select>
 
+
+	
 </mapper>

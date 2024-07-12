@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.boot.dto.CompanyListDTO;
 import com.boot.service.CompanyListService;
 
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 @Controller
 public class CompanyListController {
 
@@ -51,33 +53,9 @@ public class CompanyListController {
 		
 		 List<CompanyListDTO> dto = companyListService.RankedBySalary(param);
 		model.addAttribute("salary_list", dto);
-		
+//		
 		return "salary"; 
 	}
 	
-//	1. 기존
-//    @GetMapping("/company_list")
-//    public String showCompanyList(Model model) {
-//    	
-//    	ArrayList<CompanyListDTO> list = service.list();
-//		model.addAttribute("list", list);
-//		
-//        return "company_list"; 
-//        // returns /WEB-INF/views/company_list.jsp
-//    }
-	
-    
-//	@RequestMapping("/content_view")
-//	public String content_view(@RequestParam HashMap<String, String> param , Model model) {
-//		log.info("@# content_view");
-//		
-//		
-//		BoardDTO dto = service.contentView(param);
-//		
-//		
-//		  model.addAttribute("content_view", dto);
-//		
-//		return "content_view";
-//	}
     
 }

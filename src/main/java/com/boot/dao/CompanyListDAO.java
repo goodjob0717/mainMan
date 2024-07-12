@@ -23,12 +23,9 @@ public interface CompanyListDAO {
 	 
 	 public  List<CompanyListDTO> RankedBySalary(HashMap<String, String> param);
 	 
+	 public  List<CompanyListDTO> searchCompany(HashMap<String, String> param);
+	
 
-	
-	//1. 기존
-//	public ArrayList<CompanyListDTO> list();
-//	public CompanyListDTO contentView(HashMap<String , String> param) ;
-	
 			
 		}
 			
