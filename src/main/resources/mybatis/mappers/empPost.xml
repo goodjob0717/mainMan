@@ -11,13 +11,10 @@
             emp_startDate, emp_endDate, emp_title,
             emp_content, corpInfo
         FROM empPost
-         WHERE emp_postNo = #{empPostNo}-->
+<!--          WHERE emp_postNo = #{empPostNo}-->
         <!-- 필요에 따라 WHERE 절을 추가하여 필터링할 수 있습니다 -->
     </select>
-    
-    
 </mapper>
-
 
    <!-- 특정 채용 공고 상세 정보 조회 -->
 <!--    <select id="getEmpPostById" parameterType="int" resultType="com.boot.dto.EmpPostDTO">-->

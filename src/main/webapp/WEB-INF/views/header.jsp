@@ -3,7 +3,7 @@
 <% response.setContentType("text/html; charset=UTF-8"); %>
 
 <header>
-    <a href="main">
+    <a href="<c:url value='/main' />">
         <img src="<c:url value='/img/logo.png' />" alt="Logo">
     </a>
     <div class="header-content">
@@ -37,8 +37,8 @@
                 <div class="submenu">
                     <ul>
                         <li><a href="#">기업 정보</a></li>
-                        <li><a href="/company_list">기업 리스트</a></li>
-                        <li><a href="/salary">연봉</a></li>
+                        <li><a href="<c:url value='/company_list' />">기업 리스트</a></li>
+                        <li><a href="<c:url value='/salary' />">연봉</a></li>
                         <li><a href="#">기업 리뷰</a></li>
                     </ul>
                 </div>
@@ -59,7 +59,7 @@
                 <div class="submenu">
                     <ul>
                         <li><a href="#">고객지원</a></li>
-                        <li><a href="#">FQA (자주하는 질문)</a></li>
+                        <li><a href="<c:url value='/faq' />">FQA (자주하는 질문)</a></li>
                         <li><a href="#">1:1 문의 </a></li>
                         <li><a href="#">공지사항</a></li>
                     </ul>

@@ -24,12 +24,10 @@ public class MainController {
 	@Autowired
 	private CompanyListService companyListService;
 
+	@Autowired
 	private EmpPostService empPostService; 
 	
-	   @GetMapping("/main")
-	    public String hello (Model model) {
-		   return "/main";
-	    }
+	 
 	   
 		@RequestMapping("/login")
 		public String login(Model model) {
@@ -41,8 +39,13 @@ public class MainController {
 			return "/myPage";	
 		}
 		
-		
-		@RequestMapping("/main")
+		  @GetMapping("/main")
+		    public String hello (Model model) {
+			  log.info("@# mainPage");
+			   return "/main";
+		    }
+		  
+		@RequestMapping("/EmpPost_content")
 		public String MainEmpPost(@RequestParam HashMap<String, String> param , Model model) {
 			 // 요청 파라미터를 HashMap 형태로 받습니다.
 			 log.info("@# MainController MainEmpPost called with params: {}", param);
@@ -55,8 +58,11 @@ public class MainController {
 			// 반환받은 DTO 객체를 "company_list"라는 이름으로 모델에 추가합니다.
 			
 			return "main"; 
-	 	
-		
-		
 		}
+		
+		   @RequestMapping("/faq")
+		    public String showFaqPage() {
+		        return "faq"; // JSP 파일명 (faq.jsp)
+		    }
+
 }

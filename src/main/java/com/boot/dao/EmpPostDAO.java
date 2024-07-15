@@ -13,7 +13,7 @@ import com.boot.dto.EmpPostDTO;
 @Mapper
 public interface EmpPostDAO {
 	
-	public  List<EmpPostDTO> MainEmpPost(HashMap<String, String> param);
+	List<EmpPostDTO> MainEmpPost(HashMap<String, String> param);
 	
 //	 CompanyListDTO getCompanyById(int id);
 			

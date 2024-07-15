@@ -18,7 +18,7 @@
         SELECT 
             @rank := @rank + 1 AS ranking,
             corpInfo_No, corp_name, corp_type, 
-            corp_address, corpInfo_Sa,corpInfo_empNo, 
+            corp_address, corpInfo_Sal,corpInfo_empNo, 
             corpInfo_money, corpInfo_intro, corpInfo_birth
         FROM 
         company_list, (SELECT @rank := 0) AS r
