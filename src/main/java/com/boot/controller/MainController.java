@@ -29,23 +29,27 @@ public class MainController {
 	
 	 
 	   
-		@RequestMapping("/login")
-		public String login(Model model) {
-			return "/login";
-}
+//		@RequestMapping("/login")
+//		public String login(Model model) {
+//			return "/login";
+
 		
+		@RequestMapping("/notice_detail")
+		public String notice_detail(Model model) {
+			return "/notice_detail";	
+		}
 		@RequestMapping("/myPage")
 		public String myPage(Model model) {
 			return "/myPage";	
 		}
 		
-		  @GetMapping("/main")
-		    public String hello (Model model) {
-			  log.info("@# mainPage");
-			   return "/main";
-		    }
+//		  @GetMapping("/main")
+//		    public String hello (Model model) {
+//			  log.info("@# mainPage");
+//			   return "/main";
+//		    }
 		  
-		@RequestMapping("/EmpPost_content")
+		@RequestMapping("/main")
 		public String MainEmpPost(@RequestParam HashMap<String, String> param , Model model) {
 			 // 요청 파라미터를 HashMap 형태로 받습니다.
 			 log.info("@# MainController MainEmpPost called with params: {}", param);

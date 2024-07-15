@@ -108,6 +108,7 @@
         <div class="notice-container">
             <!-- 공지사항 카드가 여기에 들어갑니다 -->
             <div class="notice-card">
+                <li><a href="<c:url value='/notice_detail' />">
                 <div class="notice-header">
                     <h2>공지사항입니다</h2>
                     <span class="notice-date">2024-07-15</span>

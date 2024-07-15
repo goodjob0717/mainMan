@@ -10,10 +10,10 @@
         <mapper resource="mybatis/mappers/empPost.xml" />
         
 <!--        나상엽-->
-<!--		<mapper resource="mybatis/mappers/corpMem.xml" />-->
-<!--		<mapper resource="mybatis/mappers/userMem.xml" />-->
-<!--		<mapper resource="mybatis/mappers/corpReview.xml" />-->
-<!--		<mapper resource="mybatis/mappers/page.xml" />-->
+		<mapper resource="mybatis/mappers/corpMem.xml" />
+		<mapper resource="mybatis/mappers/userMem.xml" />
+		<mapper resource="mybatis/mappers/corpReview.xml" />
+		<mapper resource="mybatis/mappers/page.xml" />
 		
     </mappers>
 </configuration>
