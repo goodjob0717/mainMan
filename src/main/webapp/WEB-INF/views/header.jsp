@@ -71,7 +71,8 @@
 		
                 <!-- 혹여나 마이페이지 이동중  오류 발생시 a href방식으로 변경할수도  -->
                 <form action="myPage" method="get" id="myPageForm">
-<!--                <a href="myPage?user_id=${user_id}"></a>-->
+               <a href="myPage?user_id=${user_id}"></a>
+               <!-- <p>User ID: ${user_id}</p>  -->
                     <input type="hidden" name="user_id" value="${user_id}"/>
                     <a type="button" onclick="document.getElementById('myPageForm').submit();">마이페이지</a>
                 </form>
@@ -81,3 +82,4 @@
     </div>
     </nav>
 </header>
+

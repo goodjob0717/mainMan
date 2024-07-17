@@ -54,11 +54,11 @@ public class MainController {
 			 // 요청 파라미터를 HashMap 형태로 받습니다.
 			 log.info("@# MainController MainEmpPost called with params: {}", param);
 			
-			 List<EmpPostDTO> dto = empPostService.MainEmpPost(param);
-			 // 서비스 레이어의 company_list 메서드를 호출하여 DTO 객체를 반환받습니다.
-			 log.info("@# MainController MainEmpPost returned DTO: {}", dto);
-			 
-			model.addAttribute("MainEmpPost", dto);
+//			 List<EmpPostDTO> dto = empPostService.MainEmpPost(param);
+//			 // 서비스 레이어의 company_list 메서드를 호출하여 DTO 객체를 반환받습니다.
+//			 log.info("@# MainController MainEmpPost returned DTO: {}", dto);
+//			 
+//			model.addAttribute("MainEmpPost", dto);
 			// 반환받은 DTO 객체를 "company_list"라는 이름으로 모델에 추가합니다.
 			
 			return "main"; 

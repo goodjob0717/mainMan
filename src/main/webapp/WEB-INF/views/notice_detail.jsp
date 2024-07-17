@@ -9,7 +9,9 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/main.css' />">
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/main2.css' />">
+<style>
 
+</style>
 <script>
     $(document).ready(function(){
         $('header, nav').hover(function(){
